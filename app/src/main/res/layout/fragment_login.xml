@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightWhite"
+    tools:context=".LoginFragment">
+    <WebView
+        android:id="@+id/oauthWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_round_rectangle"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="14dp">
+        <ImageView
+            android:id="@+id/buttonIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="1dp"
+            android:contentDescription="42"
+            android:src="@drawable/logo_42"/>
+        <TextView
+            android:id="@+id/customButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/connect"
+            android:textColor="@color/lightBlack"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,61 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.apayen.swifty_companion'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.apayen.swifty_companion"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "APP_URL", "\"${project.findProperty("APP_URL")}\""
+            buildConfigField "String", "APP_UID", "\"${project.findProperty("APP_UID")}\""
+            buildConfigField "String", "APP_SECRET", "\"${project.findProperty("APP_SECRET")}\""
+            buildConfigField "String", "APP_REDIRECT", "\"${project.findProperty("APP_REDIRECT")}\""
+        }
+        debug {
+            buildConfigField "String", "APP_URL", "\"${project.findProperty("APP_URL")}\""
+            buildConfigField "String", "APP_UID", "\"${project.findProperty("APP_UID")}\""
+            buildConfigField "String", "APP_SECRET", "\"${project.findProperty("APP_SECRET")}\""
+            buildConfigField "String", "APP_REDIRECT", "\"${project.findProperty("APP_REDIRECT")}\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.okhttp
+    implementation libs.browser
+    testImplementation libs.junit
+    implementation libs.webkit
+    implementation libs.glide
+    annotationProcessor libs.compiler
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
+
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}

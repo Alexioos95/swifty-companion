@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">swifty-companion</string>
+    <string name="connect">Connect</string>
+    <string name="logout">Logout</string>
+    <string name="photo_stud">Photo of student</string>
+    <string name="undefined">undefined</string>
+    <string name="wallet">Wallet</string>
+    <string name="evaluation_points">Evaluation points</string>
+    <string name="search">Search a student…</string>
+</resources>
